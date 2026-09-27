@@ -22,3 +22,53 @@ The testing will cover both positive and negative scenarios where applicable.
 - Load and stress testing with multiple concurrent users — testing is performed manually by a single tester.
 - Production monitoring and infrastructure testing — this project is a QA testing exercise, not a live production system; infrastructure and monitoring are typically owned by DevOps/Infrastructure roles, not QA.
 - Mobile application testing — testing is performed on desktop browsers only (see Test Environment section); no native or mobile-responsive testing is included at this stage.
+
+
+## Test Approach / Strategy
+
+**Overall approach:** A combination of requirements-based (analytical) testing,
+since all test design starts from the documented requirements, and a
+dynamic/heuristic approach for the exploratory testing sessions on the cart
+and checkout flow.
+
+Testing will be performed using a black-box approach, without access to the
+application's source code or internal architecture.
+
+**Testing type:** Manual testing (no automation for this phase).
+
+**Test Types:**
+- Functional Testing — covering all in-scope functional areas (see Scope
+  section)
+- Non-Functional Testing:
+  - Usability
+  - Compatibility (cross-browser)
+  - Accessibility (basic)
+  - Performance (basic observation only, not load/stress testing)
+  - Security (basic — e.g. verifying that error messages don't reveal
+    whether a username exists)
+
+**Testing methods applied:**
+- Positive testing — verifying core flows work as expected with valid data
+  (login, product browsing, cart, checkout)
+- Negative testing — invalid credentials and locked account behavior
+  (REQ-02, REQ-03), and checkout form validation with missing/invalid
+  fields (REQ-10)
+- Boundary Value Analysis — zip code field in the checkout form
+- Equivalence Partitioning — login fields (valid, invalid, empty
+  username/password combinations)
+- Decision Table Testing — login form, since different combinations of
+  empty/invalid username and password fields, plus locked account status,
+  produce distinct error messages (full decision table documented in
+  Section 03)
+- State Transition Testing — shopping cart state changes (empty → has
+  items → checkout → empty again)
+
+**Additional testing activities during execution:**
+- Smoke Testing — performed before each major test execution session, to
+  verify basic application stability (detailed suite in Section 11)
+- Sanity Testing — performed after each bug fix, to quickly verify the
+  specific fixed area (detailed suite in Section 11)
+- Regression Testing — performed after fixes, to verify surrounding
+  functionality remains unaffected (detailed in Section 11)
+- Exploratory Testing — performed as a separate, timeboxed session
+  (detailed in Section 07)
