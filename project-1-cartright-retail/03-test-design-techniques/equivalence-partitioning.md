@@ -53,3 +53,11 @@ combination of conditions rather than a single field in isolation.
 | TC-EP-03 | standard_user (valid) | invalidpass123 (invalid) | `Epic sadface: Username and password do not match any user in this service` |
 | TC-EP-04 | *(empty)* | secret_sauce (valid) | `Epic sadface: Username is required` |
 | TC-EP-05 | standard_user (valid) | *(empty)* | `Epic sadface: Password is required` |
+
+**Note:** TC-EP-04 and TC-EP-05 intentionally overlap with rules R1 and R2
+in `decision-table-testing.md`. This is expected: when the username or
+password field is empty, the outcome depends on a single condition only
+— the decision table's combinational logic effectively "collapses" to a
+simple equivalence class in these two cases. The overlap confirms that
+both techniques produce consistent expected results, rather than
+indicating duplicated or conflicting test design.
