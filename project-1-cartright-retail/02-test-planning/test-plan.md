@@ -126,3 +126,47 @@ Testing can be considered complete when:
 | Being the sole tester increases the risk of overlooking issues that a team with multiple testers might catch through cross-checking | Medium | Apply structured test design techniques (Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing) to reduce reliance on ad-hoc judgment, maintain full requirements-to-test-case traceability to ensure no requirement is missed, and dedicate separate exploratory testing sessions specifically to catch issues that scripted test cases might not reveal |
 | Undetected browser-specific behavior (e.g. layout issues, buttons or elements rendering incorrectly, or functionality not responding as expected in one browser but not others) | Medium | Execute the full test suite in Chrome as the primary browser; perform a focused cross-browser check of the core user flows (login, add to cart, checkout) in Firefox and Safari, rather than repeating every test case in all three browsers |
 | The SQL database schema is simulated and not actually connected to SauceDemo, so database queries demonstrate methodology rather than verifying real data consistency between the UI and a live database | Medium | Clearly document this limitation in the Test Summary Report, framing the SQL section as a demonstration of database testing skills and query-writing ability rather than a claim of end-to-end UI-to-database verification |
+
+## Roles and Responsibilities
+
+### QA Tester
+
+**Role:** Manual QA Tester
+
+**Responsibilities:**
+- Review and analyze requirements
+- Design test scenarios and test cases
+- Apply appropriate test design techniques
+- Execute test cases
+- Perform exploratory testing
+- Report defects in Jira
+- Retest fixed defects
+- Perform regression testing
+- Document test results
+- Prepare the final Test Summary Report
+
+**Tester:** Lilyana Merodiyska
+
+## Test Deliverables
+
+- Requirements document
+- Test Plan
+- Test Design Technique examples (Equivalence Partitioning, Boundary Value Analysis, Decision Table, State Transition)
+- Test Cases (in TestRail)
+- Test Execution results
+- Bug Reports (in Jira)
+- Exploratory Testing session report
+- Regression/Smoke/Sanity test suites
+- Test Summary Report
+
+## Traceability
+
+Requirements are linked to their corresponding test cases to ensure full
+coverage of the planned scope.
+
+Example: `REQ-01 → TC-01, TC-02, TC-03`
+
+Defects identified during execution are linked to the test case that
+uncovered them.
+
+Example: `TC-15 → FAIL → BUG-001 → RETEST → PASS`
