@@ -72,3 +72,27 @@ application's source code or internal architecture.
   functionality remains unaffected (detailed in Section 11)
 - Exploratory Testing — performed as a separate, timeboxed session
   (detailed in Section 07)
+
+## Test Environment
+
+### Application
+**Application:** CartRight Retail
+**Test URL:** https://www.saucedemo.com
+
+### Operating System
+Windows, macOS
+
+### Browsers
+- Google Chrome
+- Mozilla Firefox
+- Safari
+
+### Test Accounts
+See `requirements.md` for the full list of test accounts and credentials.
+
+### Testing Tools
+- TestRail — test case management and execution
+- Jira — defect reporting and tracking
+- Postman — API testing (Fake Store API)
+- SQLite (via sqliteonline.com) — database testing (simulated schema)
+- GitHub — project documentation
