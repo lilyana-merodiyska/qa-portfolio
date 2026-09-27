@@ -96,3 +96,33 @@ See `requirements.md` for the full list of test accounts and credentials.
 - Postman — API testing (Fake Store API)
 - SQLite (via sqliteonline.com) — database testing (simulated schema)
 - GitHub — project documentation
+
+
+## Entry Criteria
+
+Testing can begin when:
+
+- The `requirements.md` file (including API and Database requirements) has been reviewed and finalized.
+- The test environment is available: https://www.saucedemo.com and https://fakestoreapi.com are accessible, and Chrome, Firefox, and Safari are available for testing.
+- All test accounts (`standard_user`, `locked_out_user`, `problem_user`) have been verified and are working as expected.
+- Test cases covering the planned scope have been written and are ready for execution.
+- All required testing tools (TestRail, Jira, Postman, SQLite) are set up and accessible.
+
+## Exit Criteria
+
+Testing can be considered complete when:
+
+- All planned test cases have been executed.
+- No open Critical or High severity defects remain unresolved.
+- All retesting and regression testing activities have been completed.
+- The Test Summary Report has been finalized.
+
+  ## Risks
+
+| Risk | Impact | Mitigation |
+|---|---|---|
+| Test environment is unavailable | High | Verify environment availability before execution |
+| Predefined test accounts become unavailable | High | Verify all accounts before testing; if an account is unavailable, continue testing with the remaining accounts and document the limitation in the Test Summary Report |
+| Being the sole tester increases the risk of overlooking issues that a team with multiple testers might catch through cross-checking | Medium | Apply structured test design techniques (Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing) to reduce reliance on ad-hoc judgment, maintain full requirements-to-test-case traceability to ensure no requirement is missed, and dedicate separate exploratory testing sessions specifically to catch issues that scripted test cases might not reveal |
+| Undetected browser-specific behavior (e.g. layout issues, buttons or elements rendering incorrectly, or functionality not responding as expected in one browser but not others) | Medium | Execute the full test suite in Chrome as the primary browser; perform a focused cross-browser check of the core user flows (login, add to cart, checkout) in Firefox and Safari, rather than repeating every test case in all three browsers |
+| The SQL database schema is simulated and not actually connected to SauceDemo, so database queries demonstrate methodology rather than verifying real data consistency between the UI and a live database | Medium | Clearly document this limitation in the Test Summary Report, framing the SQL section as a demonstration of database testing skills and query-writing ability rather than a claim of end-to-end UI-to-database verification |
