@@ -45,7 +45,7 @@ condition in the rule already determines the outcome.)*
 |---|---|---|---|
 | TC-DT-01 | *(empty)* | *(empty)* | `Epic sadface: Username is required` |
 | TC-DT-02 | standard_user | *(empty)* | `Epic sadface: Password is required` |
-| TC-DT-03 | wrong_user | wrong_pass | `Epic sadface: Username and password do not match any user in this service` |
+| TC-DT-03 | invaliduser | invalidpass123 | `Epic sadface: Username and password do not match any user in this service` |
 | TC-DT-04 | locked_out_user | secret_sauce | `Epic sadface: Sorry, this user has been locked out.` |
 | TC-DT-05 | standard_user | secret_sauce | User is redirected to the products page |
 
