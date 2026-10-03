@@ -1,5 +1,7 @@
 # Test Scenarios — CartRight Retail
 
+## 1. Web Application
+
 | ID    | Test Scenario                                                               | Requirement ID | Priority |
 | ----- | --------------------------------------------------------------------------- | -------------- | -------- |
 | TS-01 | Verify user authentication and access with valid and invalid credentials    | REQ-01, REQ-02 | High     |
@@ -19,12 +21,28 @@
 | TS-15 | Check usability and accessibility of the main user flows                    | REQ-01–REQ-12  | Medium   |
 | TS-16 | Perform exploratory testing of the complete shopping journey and edge cases | REQ-01–REQ-12  | Medium   |
 
-## Notes
+---
 
-* Test Scenarios define the **functional areas and behaviors to be tested**.
-* Detailed test steps, test data, preconditions and expected results will be documented in the **Test Cases**.
-* Multiple Test Cases can be created from a single Test Scenario.
-* Priority indicates the relative importance of the scenario for test execution.
-* Requirements are linked to Test Scenarios to maintain traceability.
-* API and Database testing are excluded from this document because they are currently outside the scope defined in the Test Plan.
+## 2. API Testing — Fake Store API
+
+| ID    | Test Scenario                                                                    | Requirement ID        | Priority |
+| ----- | -------------------------------------------------------------------------------- | --------------------- | -------- |
+| TS-17 | Verify product API operations including retrieval, creation, update and deletion | API-REQ-01–API-REQ-05 | High     |
+| TS-18 | Check product category, filtering, authentication and user data endpoints        | API-REQ-06–API-REQ-09 | High     |
+| TS-19 | Confirm cart retrieval and API response behavior for valid and invalid requests  | API-REQ-10            | Medium   |
+
+**Note:** Write operations on Fake Store API return simulated success responses but do not persist changes. Test Cases will explicitly distinguish between response validation and actual data persistence.
+
+---
+
+## 3. Database Testing — Simulated Schema
+
+| ID    | Test Scenario                                                                           | Requirement ID       | Priority |
+| ----- | --------------------------------------------------------------------------------------- | -------------------- | -------- |
+| TS-20 | Verify user, product and order data storage and relationships                           | DB-REQ-01–DB-REQ-03  | High     |
+| TS-21 | Check order item relationships, data integrity and consistency with the completed order | DB-REQ-04, DB-REQ-05 | High     |
+
+---
+
+
 
