@@ -28,15 +28,3 @@
 * Requirements are linked to Test Scenarios to maintain traceability.
 * API and Database testing are excluded from this document because they are currently outside the scope defined in the Test Plan.
 
-### Example
-
-**TS-05 — Check product sorting by name and price**
-
-This Test Scenario can be covered by several Test Cases, for example:
-
-* Sort products by name A–Z
-* Sort products by name Z–A
-* Sort products by price low-to-high
-* Sort products by price high-to-low
-
-The Test Cases will contain the detailed steps and expected results.
