@@ -1,0 +1,39 @@
+# State Transition Testing — Shopping Cart
+
+## What is State Transition Testing
+
+State Transition Testing is a black-box test design technique that
+models a system as a set of distinct states and the transitions between
+them, triggered by specific user actions. Unlike techniques that focus
+only on input values (such as Equivalence Partitioning), this technique
+also considers the system's current state, since the same action can
+produce different results depending on what state the system is in
+beforehand. It also verifies that invalid transitions — actions that
+should not be possible in a given state — are correctly prevented.
+
+## States Identified
+
+| State | Description |
+|---|---|
+| S0 — Empty Cart | The cart contains no items |
+| S1 — Cart with Items | The cart contains one or more items |
+| S2 — Checkout In Progress | The user has entered the checkout flow, items are still held in the cart |
+| S3 — Order Completed | The order has been successfully placed |
+
+## Valid Transitions
+
+| From State | Action | To State |
+|---|---|---|
+| S0 | User clicks "Add to Cart" on a product | S1 |
+| S1 | User removes the only item in the cart | S0 |
+| S1 | User removes one of several items (others remain) | S1 (count decreases, state unchanged) |
+| S1 | User clicks "Checkout" | S2 |
+| S2 | User completes all checkout steps and clicks "Finish" | S3 |
+| S3 | System automatically empties the cart (REQ-11) | S0 |
+
+## Invalid Transition — Negative Test Case
+
+| Test Case ID | Scenario | Expected Result | Actual Result |
+|---|---|---|---|
+| TC-ST-01 | User attempts to proceed through the entire checkout flow while the cart is empty (S0) | The system should prevent checkout access, or clearly indicate that the cart is empty | The system allows the full checkout flow to be completed (information entry → summary → finish), displaying "Thank you for your order!" even though zero items were ordered |
+
