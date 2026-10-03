@@ -32,25 +32,4 @@ should not be possible in a given state — are correctly prevented.
 | S2 | User completes all checkout steps and clicks "Finish" | S3 |
 | S3 | System automatically empties the cart (REQ-11) | S0 |
 
-## Invalid Transition — Negative Test Case
 
-| Test Case ID | Scenario | Expected Result | Actual Result |
-|---|---|---|---|
-| TC-ST-01 | User attempts to proceed through the entire checkout flow while the cart is empty (S0) | The system should prevent checkout access, or clearly indicate that the cart is empty | The system allows the full checkout flow to be completed (information entry → summary → finish), displaying "Thank you for your order!" even though zero items were ordered |
-
-## Notes
-
-This invalid transition case (TC-ST-01) was not explicitly covered by
-`requirements.md`, similar to the boundary value findings documented in
-`boundary-value-analysis.md`. Testing this scenario revealed a logical
-inconsistency: the application allows a user to complete an order with
-an empty cart, which does not represent a valid real-world business
-transaction. In a real e-commerce system, this would typically be
-flagged as a defect, since placing an "order" with zero items has no
-business meaning and could indicate a gap in the checkout flow's state
-validation.
-
-This finding will be formally documented as a bug report in
-`09-bug-reports/`, since it is concrete, reproducible, and demonstrates
-a defect discovered directly through systematic application of a test
-design technique.
