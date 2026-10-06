@@ -3,15 +3,6 @@
 Defects are logged in **Jira** (one issue per defect); this folder holds the portfolio copy of each report
 plus its screenshots, so the evidence is visible on GitHub.
 
-## Folder structure
-
-```
-11-bug-reports/
-├── README.md              
-├── bug-report-template.md 
-└── screenshots/
-    └── BUG-001-<short-description>.png
-```
 
 ## Naming and linking
 
