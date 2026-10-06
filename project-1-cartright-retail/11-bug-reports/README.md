@@ -6,7 +6,7 @@ plus its screenshots, so the evidence is visible on GitHub.
 
 ## Naming and linking
 
-- Defect ID: `BUG-001`, `BUG-002`, ... (use the same number as the Jira key where possible, e.g. `CART-1`)
+- Defect ID: `BUG-001`, `BUG-002`, ... (use the same number as the Jira key where possible, e.g. `CR-1`)
 - Screenshot: `BUG-001-<short-description>.png` — one screenshot per key observation (actual result, console/network if relevant)
 - Link chain (see Test Plan - Traceability): `TC-xx → FAIL → BUG-xxx → RETEST → PASS`
 - Every defect is logged **from the failed test in TestRail** (Push Defects / "Add Result → Defects" field), so the case and the Jira issue are linked.
