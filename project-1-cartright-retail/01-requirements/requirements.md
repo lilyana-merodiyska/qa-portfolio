@@ -36,14 +36,14 @@
 
 **REQ-12:** The user can log out at any time via the menu.
 
-## API Requirements (Fake Store API)
+## API Requirements (DummyJSON API — https://dummyjson.com)
 
 
 **API-REQ-01:** The API must return a list of all products via `GET /products`.
 
 **API-REQ-02:** The API must return the details of a specific product by ID via `GET /products/:id`.
 
-**API-REQ-03:** The API must support creating a new product via `POST /products`.
+**API-REQ-03:** The API must support creating a new product via `POST /products/add`.
 
 **API-REQ-04:** The API must support updating an existing product via `PUT` or `PATCH /products/:id`.
 
@@ -53,13 +53,13 @@
 
 **API-REQ-07:** The API must return products filtered by a specific category via `GET /products/category/:category`.
 
-**API-REQ-08:** The API must support user login via `POST /auth/login`, returning a token for valid credentials and an appropriate error response for invalid credentials.
+**API-REQ-08:** The API must support user login via `POST /auth/login`, returning an access token for valid credentials and an appropriate error response for invalid credentials.
 
 **API-REQ-09:** The API must return user data via `GET /users` and `GET /users/:id`.
 
 **API-REQ-10:** The API must support cart retrieval by user via `GET /carts/user/:id`.
 
-> **Note:** Fake Store API is a mock service — write operations (POST/PUT/PATCH/DELETE) return a fabricated success response but do **not** persist changes on the server. This is an important behavior to document explicitly when writing test cases, since "success response" does not mean "data actually changed."
+> **Note:** The API under test was originally planned as Fake Store API. It was unavailable during the testing window (HTTP 521 – web server down), so the API requirements were mapped to the equivalent endpoints of DummyJSON. DummyJSON is a mock service — write operations (POST/PUT/PATCH/DELETE) return a fabricated success response but do **not** persist changes on the server. This is an important behavior to document explicitly when writing test cases, since "success response" does not mean "data actually changed."
 
 
 ## Database Requirements (Simulated Schema)
