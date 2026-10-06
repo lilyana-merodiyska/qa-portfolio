@@ -11,7 +11,7 @@
 | **Found in test case** | TC-17 (TestRail) |
 | **Related scenario / requirement** | TS-05 / REQ-04 |
 | **Environment** | https://www.saucedemo.com |
-| **Browser / OS** | <fill in: e.g. Chrome 1xx / Windows 11> |
+| **Browser / OS** | Chrome / Windows 11> |
 | **Test account** | standard_user |
 | **Reproducibility** | Always |
 
