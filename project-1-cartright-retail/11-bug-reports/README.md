@@ -7,8 +7,8 @@ plus its screenshots, so the evidence is visible on GitHub.
 
 ```
 11-bug-reports/
-├── README.md              <- this file + bug index
-├── bug-report-template.md <- copy for each new defect
+├── README.md              
+├── bug-report-template.md 
 └── screenshots/
     └── BUG-001-<short-description>.png
 ```
