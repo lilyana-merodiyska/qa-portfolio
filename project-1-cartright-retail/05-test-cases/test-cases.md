@@ -2,7 +2,7 @@
 # Test Cases — CartRight Retail
  
 **Total test cases:** 68  
-**Tracked in:** TestRail (execution results and defect links are maintained there)  
+**Tracked in:** TestRail
 **Web app:** https://www.saucedemo.com  |  **API:** https://fakestoreapi.com
  
 Test case IDs follow the project convention (`TC-xx`). Test cases derived directly from test design techniques keep their technique IDs (`TC-EP-xx`, `TC-DT-xx`) and are mapped to the TestRail cases in the *Technique / Source* column.
