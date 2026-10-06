@@ -59,19 +59,19 @@ application's source code or internal architecture.
 - Decision Table Testing — login form, since different combinations of
   empty/invalid username and password fields, plus locked account status,
   produce distinct error messages (full decision table documented in
-  Section 03)
+  Section 04)
 - State Transition Testing — shopping cart state changes (empty → has
   items → checkout → empty again)
 
 **Additional testing activities during execution:**
 - Smoke Testing — performed before each major test execution session, to
-  verify basic application stability (detailed suite in Section 11)
+  verify basic application stability (detailed suite in Section 12)
 - Sanity Testing — performed after each bug fix, to quickly verify the
-  specific fixed area (detailed suite in Section 11)
+  specific fixed area (detailed suite in Section 12)
 - Regression Testing — performed after fixes, to verify surrounding
-  functionality remains unaffected (detailed in Section 11)
+  functionality remains unaffected (detailed in Section 12)
 - Exploratory Testing — performed as a separate, timeboxed session
-  (detailed in Section 07)
+  (detailed in Section 08)
 
 ## Test Environment
 
@@ -80,7 +80,7 @@ application's source code or internal architecture.
 **Test URL:** https://www.saucedemo.com
 
 ### Operating System
-Windows, macOS
+Windows
 
 ### Browsers
 - Google Chrome
