@@ -93,7 +93,7 @@ See `requirements.md` for the full list of test accounts and credentials.
 ### Testing Tools
 - TestRail — test case management and execution
 - Jira — defect reporting and tracking
-- Postman — API testing (Fake Store API)
+- Postman — API testing (DummyJSON API)
 - SQLite (via sqliteonline.com) — database testing (simulated schema)
 - GitHub — project documentation
 
@@ -103,7 +103,7 @@ See `requirements.md` for the full list of test accounts and credentials.
 Testing can begin when:
 
 - The `requirements.md` file (including API and Database requirements) has been reviewed and finalized.
-- The test environment is available: https://www.saucedemo.com and https://fakestoreapi.com are accessible, and Chrome, Firefox are available for testing.
+- The test environment is available: https://www.saucedemo.com and https://dummyjson.com are accessible, and Chrome, Firefox are available for testing.
 - All test accounts (`standard_user`, `locked_out_user`, `problem_user`) have been verified and are working as expected.
 - Test cases covering the planned scope have been written and are ready for execution.
 - All required testing tools (TestRail, Jira, Postman, SQLite) are set up and accessible.
