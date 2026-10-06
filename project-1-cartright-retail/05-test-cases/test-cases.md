@@ -2,14 +2,14 @@
 
 **Total test cases:** 61  
 **Tracked in:** TestRail (execution results and defect links are maintained there)  
-**Web app:** https://www.saucedemo.com  |  **API:** https://fakestoreapi.com
+**Web app:** https://www.saucedemo.com  |  **API:** https://dummyjson.com
 
 Test case IDs follow the project convention (`TC-xx`). Test cases derived directly from test design techniques keep their technique IDs (`TC-EP-xx`, `TC-DT-xx`) and are mapped to the TestRail cases in the *Technique / Source* column.
 
 **Priority:** Critical = core flow, blocks release; High = important functionality; Medium = secondary behaviour; Low = cosmetic / observation.  
 **Nature:** Positive = valid data/flow; Negative = invalid data/flow or undefined behaviour.
 
-**Note:** during planning the API suite was reduced; TC-46, TC-48, TC-50, TC-54, TC-57, TC-59 and TC-61 were merged into other cases or removed, so these numbers are intentionally skipped. All API-REQ requirements remain covered.
+**Note:** during planning the API suite was reduced; TC-46, TC-48, TC-50, TC-54, TC-57, TC-59 and TC-61 were merged into other cases or removed, so these numbers are intentionally skipped. All API-REQ requirements remain covered. The API under test was changed from Fake Store API to DummyJSON because Fake Store API was unavailable (HTTP 521); test case IDs are unchanged.
 
 ## Summary
 
@@ -19,7 +19,7 @@ Test case IDs follow the project convention (`TC-xx`). Test cases derived direct
 | Product Listing & Sorting | 7 |
 | Shopping Cart | 8 |
 | Checkout | 12 |
-| API (Fake Store API) | 12 |
+| API (DummyJSON API) | 12 |
 | Database (SQLite, simulated schema) | 7 |
 | **Total** | **61** |
 
@@ -85,22 +85,22 @@ Test case IDs follow the project convention (`TC-xx`). Test cases derived direct
 | TC-41 | Checkout with an empty cart (undefined behaviour) | TS-20 | Medium | Negative | User is logged in as standard_user; the cart is empty | 1. Open the cart page<br>2. Click 'Checkout'<br>3. Fill in valid data and continue<br>4. Click 'Finish' | Not defined in the requirements. Expected from a business point of view: an order with no items should not be possible. Record the ACTUAL behaviour and raise a defect/observation if the order is completed. | TS-20 (exploratory) |
 | TC-42 | Zip/Postal Code accepts non-numeric and very long values (observation) | TS-11 | Low | Negative | User is on checkout step 1 with at least 1 item in the cart | 1. Enter First Name and Last Name with valid values<br>2. Enter Zip: 'ABC!@#' and click 'Continue'<br>3. Repeat with a 200-character Zip value | Not defined in the requirements (see boundary-value-analysis.md). Record the ACTUAL behaviour as an observation, not as a defect. | BVA doc |
 
-## API (Fake Store API)
+## API (DummyJSON API)
 
 | ID | Title | Scenario | Priority | Nature | Preconditions | Steps | Expected Result | Technique / Source |
 |---|---|---|---|---|---|---|---|---|
-| TC-43 | GET /products returns the product list | TS-13 | Critical | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /products | Status 200 OK. Body is a JSON array of products; each has id, title, price, description, category, image. Response time is reasonable. |  |
-| TC-44 | GET /products/:id returns the correct product | TS-13 | Critical | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /products/1 | Status 200 OK. Body is a single product object with id = 1 and all expected fields. |  |
-| TC-45 | GET /products/:id with a non-existent id | TS-13 | High | Negative | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /products/9999 | Expected per REST conventions: 404 Not Found with an error message. Verify the body as well as the status code (a 200 with an empty/null body is a silent failure) and document the ACTUAL behaviour. |  |
-| TC-47 | POST /products creates a product (mock API: change is not persisted) | TS-13 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send POST /products with a JSON body: title, price, description, image, category<br>2. Note the id from the response<br>3. Send GET /products/{id from the previous response} | POST returns status 200/201 with the submitted fields and a new id. The following GET does NOT return the new product: Fake Store API does not persist writes. Document this explicitly - a success response does not mean the data changed. |  |
-| TC-49 | PUT /products/:id updates a product | TS-13 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send PUT /products/1 with a full JSON body and a changed title | Status 200 OK. Response contains the data sent, with id 1. |  |
-| TC-51 | DELETE /products/:id removes a product | TS-13 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send DELETE /products/1 | Status 200 OK; the deleted product is returned. Document that a following GET /products/1 still returns the product (not persisted). |  |
-| TC-52 | GET /products/categories returns all categories | TS-14 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /products/categories | Status 200 OK. Body is a JSON array of category names (4 categories). |  |
-| TC-53 | GET /products/category/:category filters correctly | TS-14 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /products/category/electronics | Status 200 OK. Every returned product has category = 'electronics'; no other category appears. |  |
-| TC-55 | POST /auth/login with valid credentials | TS-15 | Critical | Positive | Postman is open; use a valid user from GET /users (e.g. mor_2314) | 1. Send POST /auth/login with body {"username": "mor_2314", "password": "83r5^_"} | Status 200 OK. Body contains a non-empty 'token'. |  |
-| TC-56 | POST /auth/login with invalid credentials | TS-15 | High | Negative | Postman is open; base URL https://fakestoreapi.com | 1. Send POST /auth/login with body {"username": "wrong", "password": "wrong"} | Status 401 Unauthorized with an error message; NO token is returned. |  |
-| TC-58 | GET /users and GET /users/:id return user data | TS-16 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /users<br>2. Send GET /users/1 | GET /users: status 200 OK, JSON array of users (id, username, email, name, address, phone). GET /users/1: status 200 OK, a single user object with id = 1. |  |
-| TC-60 | GET /carts/user/:id returns the carts of a user | TS-16 | High | Positive | Postman is open; base URL https://fakestoreapi.com | 1. Send GET /carts/user/1 | Status 200 OK. Array of carts, each with userId = 1, a date and a products list (productId, quantity). |  |
+| TC-43 | GET /products returns the product list | TS-13 | Critical | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /products | Status 200 OK. Body is a JSON object with a `products` array (30 items by default) and `total`, `skip`, `limit`. Each product has id, title, description, category, price and thumbnail. Response time is reasonable. |  |
+| TC-44 | GET /products/:id returns the correct product | TS-13 | Critical | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /products/1 | Status 200 OK. Body is a single product object with id = 1 and all expected fields. |  |
+| TC-45 | GET /products/:id with a non-existent id | TS-13 | High | Negative | Postman is open; base URL https://dummyjson.com | 1. Send GET /products/9999 | Expected per REST conventions: 404 Not Found with an error message. Verify the body as well as the status code (a 200 with an empty/null body is a silent failure) and document the ACTUAL behaviour. |  |
+| TC-47 | POST /products/add creates a product (mock API: change is not persisted) | TS-13 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send POST /products/add with a JSON body: title, price, category<br>2. Note the id from the response<br>3. Send GET /products/{id from the previous response} | POST returns status 201 (or 200) with the submitted fields and a new id. The following GET does NOT return the new product: DummyJSON does not persist writes. Document this explicitly - a success response does not mean the data changed. |  |
+| TC-49 | PUT /products/:id updates a product | TS-13 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send PUT /products/1 with a JSON body containing a changed title<br>2. Send GET /products/1 | PUT returns status 200 OK with the updated title and id 1. The following GET still returns the original title (not persisted) - document it. |  |
+| TC-51 | DELETE /products/:id removes a product | TS-13 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send DELETE /products/1<br>2. Send GET /products/1 | DELETE returns status 200 OK with the product and `isDeleted: true`. Document that the following GET /products/1 still returns the product (not persisted). |  |
+| TC-52 | GET /products/categories returns all categories | TS-14 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /products/categories | Status 200 OK. Body is a JSON array of categories (each with slug, name and url). Record the number of categories (24 according to the documentation). |  |
+| TC-53 | GET /products/category/:category filters correctly | TS-14 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /products/category/beauty | Status 200 OK. Every returned product has category = 'beauty'; no other category appears. |  |
+| TC-55 | POST /auth/login with valid credentials | TS-15 | Critical | Positive | Postman is open; base URL https://dummyjson.com; valid test user from the DummyJSON documentation | 1. Send POST /auth/login with body {"username": "emilys", "password": "emilyspass"} | Status 200 OK. Body contains a non-empty `accessToken` (and `refreshToken`). |  |
+| TC-56 | POST /auth/login with invalid credentials | TS-15 | High | Negative | Postman is open; base URL https://dummyjson.com | 1. Send POST /auth/login with body {"username": "wrong", "password": "wrong"} | A 4xx error status (400 Bad Request or 401 Unauthorized) with an error message; NO token is returned. Record the ACTUAL status code and message. |  |
+| TC-58 | GET /users and GET /users/:id return user data | TS-16 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /users<br>2. Send GET /users/1 | GET /users: status 200 OK, body has a `users` array (30 by default) plus total, skip, limit. GET /users/1: status 200 OK, a single user object with id = 1. |  |
+| TC-60 | GET /carts/user/:id returns the carts of a user | TS-16 | High | Positive | Postman is open; base URL https://dummyjson.com | 1. Send GET /carts/user/1 | Status 200 OK. Body has a `carts` array; each cart has userId = 1 and a products list (id, title, price, quantity) and totals. |  |
 
 ## Database (SQLite, simulated schema)
 
