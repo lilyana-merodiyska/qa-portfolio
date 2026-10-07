@@ -1,6 +1,6 @@
 # CartRight Retail — QA Portfolio Project
 
-A manual QA project that follows the full testing process: from requirements to the final test summary report. The testing is done on the public demo web shop [SauceDemo](https://www.saucedemo.com) (treated as "CartRight Retail"), the [Fake Store API](https://fakestoreapi.com) and a simulated SQL database.
+A manual QA project that follows the full testing process: from requirements to the final test summary report. The testing is done on the public demo web shop [SauceDemo](https://www.saucedemo.com) (treated as "CartRight Retail"), the [DummyJSON API](https://dummyjson.com) and a simulated SQL database.
 
 **Author:** Lilyana Merodiyska
 
@@ -25,7 +25,7 @@ Every test case is linked to a test scenario and every scenario to a requirement
 | [06-functional-testing](06-functional-testing) | Execution results of the UI test cases |
 | [07-non-functional-testing](07-non-functional-testing) | Basic non-functional checks and cross-browser testing |
 | [08-exploratory-testing](08-exploratory-testing) | Exploratory session report |
-| 09-api-testing | *In progress* (see Status) |
+| [09-api-testing](09-api-testing) | Postman API tests with results and screenshots |
 | [10-sql-queries](10-sql-queries) | Database schema, SQL queries and results |
 | [11-bug-reports](11-bug-reports) | Defect reports with screenshots |
 | [12-execution-retest-regression](12-execution-retest-regression) | Defect retest, smoke / sanity / regression suites |
@@ -35,7 +35,7 @@ Every test case is linked to a test scenario and every scenario to a requirement
 
 | | |
 |---|---|
-| Test cases | 61 (49 executed, 47 passed, 2 failed) |
+| Test cases | 61 (all executed: 59 passed, 2 failed) |
 | Defects found | 2 (1 High, 1 Medium), both still open |
 | Test techniques | Equivalence Partitioning, Boundary Value Analysis, Decision Table, State Transition |
 | Other testing | Exploratory, cross-browser (Chrome, Firefox), basic non-functional, SQL |
@@ -45,7 +45,7 @@ Defects found:
 - [BUG-002](11-bug-reports/BUG-002-checkout-with-empty-cart.md) (CR-3) - an order can be completed with an empty cart
 
 ## Status and limitations
-- **API testing (12 test cases) is not executed yet**: the Fake Store API was unavailable during the testing window.
+- The API under test was changed from Fake Store API to **DummyJSON** because Fake Store API was down (HTTP 521) during testing. DummyJSON is a mock: write operations are not persisted.
 - The SQL database is simulated and is not connected to SauceDemo; it demonstrates database testing methodology.
 - Safari was not tested (testing was done on Windows).
 
