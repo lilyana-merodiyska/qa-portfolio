@@ -20,7 +20,7 @@ Execution of the functional test cases (UI) in TestRail. API and database testin
 | Checkout | 12 | 11 | 1 | 0 | 92% |
 | **Total (functional UI)** | **42** | **40** | **2** | **0** | **95%** |
 
-![TestRail test runs overview](testrail-test-runs.png.png)
+![TestRail test runs overview](Testrail-new.png)
 
 ## Failed test cases and defects
 
