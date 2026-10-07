@@ -36,3 +36,9 @@ plus its screenshots, so the evidence is visible on GitHub.
 | [BUG-005](BUG-005-problem-user-add-to-cart.md) | CR-6 | "Add to cart" does nothing for some products (problem_user) | High | High | Exploratory (TC-23) | Open |
 | [BUG-006](BUG-006-problem-user-remove-on-products-page.md) | CR-7 | "Remove" button on the Products page does not remove products (problem_user) | Medium | Medium | Exploratory (TC-27) | Open |
 | *(add a row after each defect is logged)* | | | | | | |
+
+## Jira screenshots
+
+![Bug list in Jira](screenshots/jira-bug-list.png)
+
+![CR-3 in Jira](screenshots/jira-CR-3.png)
