@@ -31,4 +31,8 @@ plus its screenshots, so the evidence is visible on GitHub.
 |---|---|---|---|---|---|---|
 | [BUG-001](BUG-001-wrong-tshirt-image.md) | CR-1 | Product "Test.allTheThings() T-Shirt (Red)" displays an image of an orange long-sleeve shirt | Medium | Medium | TC-17 | Open |
 | [BUG-002](BUG-002-checkout-with-empty-cart.md) | CR-3 | User can complete an order with an empty cart | High | Medium | TC-41 | Open |
+| [BUG-003](BUG-003-problem-user-same-image.md) | CR-4 | All products show the same dog image (problem_user) | Medium | Medium | Exploratory (TC-16/17) | Open |
+| [BUG-004](BUG-004-problem-user-sorting.md) | CR-5 | Product sorting does not work (problem_user) | High | Medium | Exploratory (TC-19/20) | Open |
+| [BUG-005](BUG-005-problem-user-add-to-cart.md) | CR-6 | "Add to cart" does nothing for some products (problem_user) | High | High | Exploratory (TC-23) | Open |
+| [BUG-006](BUG-006-problem-user-remove-on-products-page.md) | CR-7 | "Remove" button on the Products page does not remove products (problem_user) | Medium | Medium | Exploratory (TC-27) | Open |
 | *(add a row after each defect is logged)* | | | | | | |
