@@ -1,5 +1,9 @@
 # Exploratory Testing — CartRight Retail
 
+Two timeboxed sessions: **Session 1** (checkout edge cases, `standard_user`) and **Session 2** (`problem_user`).
+
+# Session 1 — Checkout edge cases
+
 **Scenario:** TS-20 — Exploratory session covering usability, accessibility and edge cases (including empty-cart checkout)
 
 ## Session details
@@ -32,4 +36,33 @@ Explore the checkout flow and its edge cases with unusual input and unusual navi
 
 ## Summary
 - 4 ideas explored; 1 defect (BUG-002), 1 observation with a recommendation, 2 behaviours confirmed as correct.
-- Out of scope for this short session: other user accounts (e.g. problem_user), mobile layouts, screen readers.
+- Out of scope for this short session: other user accounts, mobile layouts, screen readers.
+
+---
+
+# Session 2 — `problem_user`
+
+| | |
+|---|---|
+| **Date** | 2026-10-07 |
+| **Tester** | Lilyana Merodiyska |
+| **Timebox** | about 15 minutes |
+| **Application** | https://www.saucedemo.com |
+| **Browser / OS** | Chrome / Windows |
+| **Test account** | problem_user |
+
+## Charter
+Explore the application as `problem_user` and find behaviour that differs from `standard_user`.
+
+## Session notes
+
+| # | What was tried | What happened | Assessment |
+|---|---|---|---|
+| EX2-01 | Look at the product images on the Products page | All 6 products show the same picture of a dog | **Defect** - [BUG-003](../11-bug-reports/BUG-003-problem-user-same-image.md) (CR-4) |
+| EX2-02 | Sort by "Name (Z to A)" and "Price (low to high)" | The order does not change for either option | **Defect** - [BUG-004](../11-bug-reports/BUG-004-problem-user-sorting.md) (CR-5) |
+| EX2-03 | Click "Add to cart" on all 6 products | Bike Light, Fleece Jacket and Test.allTheThings() T-Shirt (Red) are not added | **Defect** - [BUG-005](../11-bug-reports/BUG-005-problem-user-add-to-cart.md) (CR-6) |
+| EX2-04 | Click "Remove" on the Products page for an added product | The product is not removed; "Remove" works only on the cart page | **Defect** - [BUG-006](../11-bug-reports/BUG-006-problem-user-remove-on-products-page.md) (CR-7) |
+
+## Summary
+- 4 ideas explored; 4 defects found (BUG-003 to BUG-006).
+- Not explored in this session: checkout and login as `problem_user`, mobile layouts.
