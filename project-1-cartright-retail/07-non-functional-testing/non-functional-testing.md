@@ -1,4 +1,4 @@
-# Non-Functional Testing — CartRight Retail
+# Non-Functional Testing - CartRight Retail
 
 Basic non-functional checks, as defined in the Test Plan (Test Types): usability, compatibility, accessibility, performance (observation only) and basic security. These are lightweight checks performed manually in the browser, not full test suites.
 
