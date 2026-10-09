@@ -1,4 +1,4 @@
-# State Transition Testing — Shopping Cart
+# State Transition Testing - Shopping Cart
 
 ## What is State Transition Testing
 
@@ -8,17 +8,17 @@ them, triggered by specific user actions. Unlike techniques that focus
 only on input values (such as Equivalence Partitioning), this technique
 also considers the system's current state, since the same action can
 produce different results depending on what state the system is in
-beforehand. It also verifies that invalid transitions — actions that
-should not be possible in a given state — are correctly prevented.
+beforehand. It also verifies that invalid transitions - actions that
+should not be possible in a given state - are correctly prevented.
 
 ## States Identified
 
 | State | Description |
 |---|---|
-| S0 — Empty Cart | The cart contains no items |
-| S1 — Cart with Items | The cart contains one or more items |
-| S2 — Checkout In Progress | The user has entered the checkout flow, items are still held in the cart |
-| S3 — Order Completed | The order has been successfully placed |
+| S0 - Empty Cart | The cart contains no items |
+| S1 - Cart with Items | The cart contains one or more items |
+| S2 - Checkout In Progress | The user has entered the checkout flow, items are still held in the cart |
+| S3 - Order Completed | The order has been successfully placed |
 
 ## Valid Transitions
 
@@ -38,10 +38,10 @@ These are actions that should **not** be possible in the given state. The test c
 
 | From State | Action | Expected behaviour |
 |---|---|---|
-| S0 — Empty Cart | User clicks "Checkout" | The system prevents checkout and shows a message (an order without items must not be possible) |
-| S0 — Empty Cart | User tries to remove an item | Not possible: there is no item and no "Remove" button |
-| S3 — Order Completed | User repeats the order (e.g. browser "Back" button, then "Finish" again) | The completed order is not repeated; the cart stays empty |
-| S1 — Cart with Items | User opens the order confirmation without going through checkout | Not possible without completing the checkout steps |
+| S0 - Empty Cart | User clicks "Checkout" | The system prevents checkout and shows a message (an order without items must not be possible) |
+| S0 - Empty Cart | User tries to remove an item | Not possible: there is no item and no "Remove" button |
+| S3 - Order Completed | User repeats the order (e.g. browser "Back" button, then "Finish" again) | The completed order is not repeated; the cart stays empty |
+| S1 - Cart with Items | User opens the order confirmation without going through checkout | Not possible without completing the checkout steps |
 
 ## Test Cases Derived from the Transitions
 
