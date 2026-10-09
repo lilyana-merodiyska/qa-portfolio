@@ -1,4 +1,4 @@
-# Cross-Browser Testing — CartRight Retail
+# Cross-Browser Testing - CartRight Retail
 
 **Scenario:** TS-19 (application works in more than one browser)
 **Approach (see Test Plan - Risks):** the full suite is executed in Chrome (primary browser); the core user flow is re-checked in Firefox instead of repeating every test case.
