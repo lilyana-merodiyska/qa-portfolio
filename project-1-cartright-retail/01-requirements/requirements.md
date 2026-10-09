@@ -7,7 +7,7 @@
 | Username | Password | Purpose |
 |---|---|---|
 | standard_user | secret_sauce | Normal user flow |
-| locked_out_user | secret_sauce | Negative testing — locked account |
+| locked_out_user | secret_sauce | Negative testing - locked account |
 | problem_user | secret_sauce | UI bugs for bug report examples |
 
 ## Requirements
