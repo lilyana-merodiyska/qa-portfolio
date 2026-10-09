@@ -1,4 +1,4 @@
-# API Testing — CartRight Retail
+# API Testing - CartRight Retail
 
 API testing with Postman against the **DummyJSON API** (https://dummyjson.com).
 
