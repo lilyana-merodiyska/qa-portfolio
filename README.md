@@ -1,4 +1,4 @@
-# QA Portfolio — Lilyana Merodiyska
+# QA Portfolio - Lilyana Merodiyska
 
 Hi! This repository contains my manual QA projects. Each one follows the full testing process, from requirements to the final test summary report.
 
