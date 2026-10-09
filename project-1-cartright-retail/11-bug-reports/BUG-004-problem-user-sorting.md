@@ -1,4 +1,4 @@
-# BUG-004 — Product sorting does not work (problem_user)
+# BUG-004 - Product sorting does not work (problem_user)
 
 | Field | Value |
 |---|---|
