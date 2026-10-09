@@ -1,4 +1,4 @@
-# Test Cases — CartRight Retail
+# Test Cases - CartRight Retail
 
 **Total test cases:** 61  
 **Tracked in:** TestRail (execution results and defect links are maintained there)  
