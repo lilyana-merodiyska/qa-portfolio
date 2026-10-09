@@ -1,4 +1,4 @@
-# BUG-001 — Product "Test.allTheThings() T-Shirt (Red)" displays an image of an orange long-sleeve shirt
+# BUG-001 - Product "Test.allTheThings() T-Shirt (Red)" displays an image of an orange long-sleeve shirt
 
 | Field | Value |
 |---|---|
