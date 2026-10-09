@@ -1,4 +1,4 @@
-# Functional Testing — CartRight Retail
+# Functional Testing - CartRight Retail
 
 Execution of the functional test cases (UI) in TestRail. API and database testing are reported separately (folders 09 and 10).
 
