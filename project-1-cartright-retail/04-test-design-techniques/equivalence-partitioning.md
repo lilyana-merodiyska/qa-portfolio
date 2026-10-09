@@ -1,4 +1,4 @@
-# Equivalence Partitioning — Login Form
+# Equivalence Partitioning - Login Form
 
 ## What is Equivalence Partitioning
 
