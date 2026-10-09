@@ -1,4 +1,4 @@
-# Boundary Value Analysis — Exploration Findings
+# Boundary Value Analysis - Exploration Findings
 
 ## What is Boundary Value Analysis
 
