@@ -1,4 +1,4 @@
-# Decision Table Testing — Login Form
+# Decision Table Testing - Login Form
 
 ## What is Decision Table Testing
 
