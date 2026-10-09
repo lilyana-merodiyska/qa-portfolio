@@ -1,4 +1,4 @@
-# Test Scenarios — CartRight Retail
+# Test Scenarios - CartRight Retail
 
 ## Web Application
 
