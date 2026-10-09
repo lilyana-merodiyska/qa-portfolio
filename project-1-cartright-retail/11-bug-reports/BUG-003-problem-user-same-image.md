@@ -1,4 +1,4 @@
-# BUG-003 — All products show the same dog image (problem_user)
+# BUG-003 - All products show the same dog image (problem_user)
 
 | Field | Value |
 |---|---|
