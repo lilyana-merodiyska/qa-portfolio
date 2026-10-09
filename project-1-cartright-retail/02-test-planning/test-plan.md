@@ -17,7 +17,7 @@ The testing will cover both positive and negative scenarios where applicable.
 
 - Real payment processing - SauceDemo's checkout form only collects and validates input data; it does not connect to an actual payment gateway or process real transactions.
 - Real customer data - all testing is performed using predefined test accounts and fictional data; no real personal or financial customer information is used or exposed.
-- Backend/server-side code testing — testing is performed exclusively as black-box testing, without access to the application's source code or internal architecture.
+- Backend/server-side code testing - testing is performed exclusively as black-box testing, without access to the application's source code or internal architecture.
 - Advanced security or penetration testing - this project is scoped for a Junior Manual QA level.
 - Load and stress testing with multiple concurrent users - testing is performed manually by a single tester.
 - Production monitoring and infrastructure testing - this project is a QA testing exercise, not a live production system; infrastructure and monitoring are typically owned by DevOps/Infrastructure roles, not QA.
@@ -48,19 +48,19 @@ application's source code or internal architecture.
     whether a username exists)
 
 **Testing methods applied:**
-- Positive testing — verifying core flows work as expected with valid data
+- Positive testing - verifying core flows work as expected with valid data
   (login, product browsing, cart, checkout)
-- Negative testing — invalid credentials and locked account behavior
+- Negative testing - invalid credentials and locked account behavior
   (REQ-02, REQ-03), and checkout form validation with missing/invalid
   fields (REQ-10)
-- Boundary Value Analysis — zip code field in the checkout form
-- Equivalence Partitioning — login fields (valid, invalid, empty
+- Boundary Value Analysis - zip code field in the checkout form
+- Equivalence Partitioning - login fields (valid, invalid, empty
   username/password combinations)
-- Decision Table Testing — login form, since different combinations of
+- Decision Table Testing - login form, since different combinations of
   empty/invalid username and password fields, plus locked account status,
   produce distinct error messages (full decision table documented in
   Section 04)
-- State Transition Testing — shopping cart state changes (empty → has
+- State Transition Testing - shopping cart state changes (empty → has
   items → checkout → empty again)
 
 **Additional testing activities during execution:**
