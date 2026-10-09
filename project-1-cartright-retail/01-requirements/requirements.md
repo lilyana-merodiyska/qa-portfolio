@@ -1,4 +1,4 @@
-# CartRight Retail — Requirements
+# CartRight Retail - Requirements
 
 **Test environment:** https://www.saucedemo.com
 
@@ -36,7 +36,7 @@
 
 **REQ-12:** The user can log out at any time via the menu.
 
-## API Requirements (DummyJSON API — https://dummyjson.com)
+## API Requirements (DummyJSON API - https://dummyjson.com)
 
 
 **API-REQ-01:** The API must return a list of all products via `GET /products`.
