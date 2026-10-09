@@ -1,4 +1,4 @@
-# Execution, Retest and Regression — CartRight Retail
+# Execution, Retest and Regression - CartRight Retail
 
 ## 1. Retest of defects
 
