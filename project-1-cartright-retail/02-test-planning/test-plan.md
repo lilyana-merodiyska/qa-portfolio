@@ -1,4 +1,4 @@
-# Test Plan — CartRight Retail
+# Test Plan - CartRight Retail
 
 ## Scope
 
