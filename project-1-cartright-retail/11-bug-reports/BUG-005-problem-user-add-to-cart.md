@@ -1,4 +1,4 @@
-# BUG-005 — "Add to cart" does nothing for some products (problem_user)
+# BUG-005 - "Add to cart" does nothing for some products (problem_user)
 
 | Field | Value |
 |---|---|
