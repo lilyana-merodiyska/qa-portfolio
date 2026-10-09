@@ -1,4 +1,4 @@
-# BUG-002 — User can complete an order with an empty cart
+# BUG-002 - User can complete an order with an empty cart
 
 | Field | Value |
 |---|---|
