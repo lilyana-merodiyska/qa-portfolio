@@ -1,4 +1,4 @@
-# CartRight Retail — QA Portfolio Project
+# CartRight Retail - QA Portfolio Project
 
 A manual QA project that follows the full testing process: from requirements to the final test summary report. The testing is done on the public demo web shop [SauceDemo](https://www.saucedemo.com) (treated as "CartRight Retail"), the [DummyJSON API](https://dummyjson.com) and a simulated SQL database.
 
