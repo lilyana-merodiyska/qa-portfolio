@@ -1,4 +1,4 @@
-# BUG-XXX — <Short, specific title: what is wrong + where>
+# BUG-XXX - <Short, specific title: what is wrong + where>
 
 | Field | Value |
 |---|---|
