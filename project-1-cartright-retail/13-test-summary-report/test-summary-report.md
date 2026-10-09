@@ -1,4 +1,4 @@
-# Test Summary Report — CartRight Retail
+# Test Summary Report - CartRight Retail
 
 | | |
 |---|---|
