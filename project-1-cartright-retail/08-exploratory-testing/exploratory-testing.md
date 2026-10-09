@@ -1,10 +1,10 @@
-# Exploratory Testing — CartRight Retail
+# Exploratory Testing - CartRight Retail
 
 Two timeboxed sessions: **Session 1** (checkout edge cases, `standard_user`) and **Session 2** (`problem_user`).
 
-# Session 1 — Checkout edge cases
+# Session 1 - Checkout edge cases
 
-**Scenario:** TS-20 — Exploratory session covering usability, accessibility and edge cases (including empty-cart checkout)
+**Scenario:** TS-20 - Exploratory session covering usability, accessibility and edge cases (including empty-cart checkout)
 
 ## Session details
 
@@ -40,7 +40,7 @@ Explore the checkout flow and its edge cases with unusual input and unusual navi
 
 ---
 
-# Session 2 — `problem_user`
+# Session 2 - `problem_user`
 
 | | |
 |---|---|
