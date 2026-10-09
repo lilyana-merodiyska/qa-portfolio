@@ -1,4 +1,4 @@
-# Bug Reports — CartRight Retail
+# Bug Reports - CartRight Retail
 
 Defects are logged in **Jira** (one issue per defect); this folder holds the portfolio copy of each report
 plus its screenshots, so the evidence is visible on GitHub.
