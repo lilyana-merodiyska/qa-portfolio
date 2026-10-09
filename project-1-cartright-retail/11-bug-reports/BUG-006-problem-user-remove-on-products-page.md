@@ -1,4 +1,4 @@
-# BUG-006 — "Remove" button on the Products page does not remove products (problem_user)
+# BUG-006 - "Remove" button on the Products page does not remove products (problem_user)
 
 | Field | Value |
 |---|---|
