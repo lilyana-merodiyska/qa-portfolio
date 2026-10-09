@@ -1,4 +1,4 @@
-# Database Testing — Results
+# Database Testing - Results
 
 Database testing of the simulated CartRight schema (SQLite). The queries are in [sql-queries.sql](sql-queries.sql).
 
